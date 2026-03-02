@@ -1,0 +1,44 @@
+[build-system]
+requires = ['setuptools>=61.0', 'wheel']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'scaffolding'
+version = '0.0.1'
+description = 'Lightweight Python utilities to scaffold your data analytics projects.'
+readme = 'README.md'
+authors = [
+    {name = 'Clément Jacquet', email = 'do.not@email.me'}
+]
+license = {text = 'MIT'}
+requires-python = '>=3.8,<=3.14'
+dependencies = [
+    'scipy',
+    'numpy',
+    'pandas',
+    'xarray',
+    # NetCDF
+    'h5py',
+    'netcdf4',
+    # Dask
+    'dask',
+    'dask[distributed]',
+    'pydantic',
+    'pyyaml',
+    'python-dotenv',
+    'openpyxl',
+]
+
+[project.urls]
+Repository = 'https://github.com/steeve-boucherie/Scaffolding.git'
+
+[project.optional-dependencies]
+dev = [
+    'pytest',
+    'flake8',
+]
+
+[tool.setuptools.packages.find]
+where = ['.']
+include = ['pb_scada*']
+exclude = ['tests*', 'docs*']

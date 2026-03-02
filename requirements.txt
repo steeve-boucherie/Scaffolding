@@ -1,0 +1,19 @@
+# Data science
+numpy
+scipy
+pandas
+xarray
+# NetCDF
+h5py
+netcdf4
+# Dask
+dask[distributed]
+# hvplot
+# pythonic <3
+pydantic
+# jupyter and stuff
+ipython
+# package management
+python-dotenv
+# misc
+openpyxl
