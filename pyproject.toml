@@ -40,5 +40,5 @@ dev = [
 
 [tool.setuptools.packages.find]
 where = ['.']
-include = ['pb_scada*']
+include = ['scaffolding*']
 exclude = ['tests*', 'docs*']
