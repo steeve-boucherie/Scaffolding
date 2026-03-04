@@ -96,6 +96,30 @@ def is1d(arr: np.ndarray) -> None:
         raise ValueError(msg)
 
 
+def equal_shape(a1: np.ndarray, a2: np.ndarray) -> None:
+    """
+    Given two arrays, test if the have the same shape, \
+        and raise ValueError if otherwise.
+
+    Parameters
+    ----------
+    a1: np.ndarray
+        Input array #1.
+    a2: np.ndarray
+        Input array #2.
+
+    Raises
+    ------
+        ValueError
+    """
+    if a1.shape != a2.shape:
+        msg = f'Shape mismatch between inputs array.\nArray #1 has shape {a1.shape},' \
+              f'while array #2 has shape {a2.shape}.\n' \
+              'Please check your inputs.'
+        logger.error(msg)
+        raise ValueError(msg)
+
+
 def cbrt(arr: np.ndarray) -> np.ndarray:
     """
     Return the cubic root of the input array.
