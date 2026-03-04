@@ -11,10 +11,9 @@ import xarray as xr
 
 
 # PACKAGE IMPORT
-from pyward.utils.io import create_chunks, to_list
-from pyward.utils.numpy_utils import get_nth_element
-from pyward.utils.stats import edges2labels, equally_spaced_bins
-from pyward import get_coord_mapper
+from scaffolding.io import create_chunks, to_list
+from scaffolding.numpy_utils import get_nth_element
+from scaffolding.stats import edges2labels, equally_spaced_bins
 
 
 # LOGGER
@@ -22,7 +21,7 @@ logger = logging.getLogger(__name__)
 
 
 # DEFAULT
-COORD_MAPPER = get_coord_mapper()
+# None :)
 
 
 # FUNCTIONS
@@ -148,7 +147,7 @@ def get_nth_along_dim(
     Notes
     -----
     Wrapper around corresponding numpy method get_nth_element method.
-    See pyward.utils.numpy_utils.get_nth_element for more details.
+    See scaffolding.numpy_utils.get_nth_element for more details.
 
     Parameters
     ----------
